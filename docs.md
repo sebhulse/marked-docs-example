@@ -10,7 +10,7 @@ async function run() {
   let file = await fetch(docs)
   let text = await file.text()
   document.getElementById('content').innerHTML =
-    marked(text);
+    marked.parse(text);
   hljs.highlightAll();
 }
 run()
